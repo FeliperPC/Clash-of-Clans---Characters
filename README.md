@@ -4,7 +4,7 @@ Card : Esse componente é responsável por mostrar o card no App ao selecionar o
 
 NavLink : Esse componente é responsável por fazer o menu da aplicação
 
-Characteres Buttons : Esses serão os botões dos personagens 
+Characteres List : Esses serão os botões dos personagens 
 
 Páginas : 
 
