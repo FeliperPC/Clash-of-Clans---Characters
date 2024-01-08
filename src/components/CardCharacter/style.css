@@ -1,0 +1,31 @@
+.card-character{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  width: 220px;
+  margin: 10px 0;
+  box-shadow: 4px 4px 8px #2c3e50; 
+}
+
+
+@media screen and (min-width:400px){
+  .character-img{
+    width: 50px;
+  }
+  .icon{
+    width: 10px;
+  }
+  .card-character-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+  }
+  .card-character-info-text{
+    width:50%;
+  }
+}

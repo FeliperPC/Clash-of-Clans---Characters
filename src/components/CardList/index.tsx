@@ -20,10 +20,11 @@ function CardList (){
         image={cardCharacter.image}
         troop = {cardCharacter.troop}
         target ={cardCharacter.target}
+        targetArea ={cardCharacter.targetArea}
       />
       <div className="card-list">
       {troopList.map((character)=>(
-        <CharacterButton 
+        <CharacterButton key={character.name}
           name = {character.name} 
           image={character.image}
           characterPreview={characterPreview}
