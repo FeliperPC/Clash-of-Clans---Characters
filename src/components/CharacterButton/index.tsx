@@ -1,13 +1,18 @@
 import './style.css'
+import { Character } from '../../typeCharacter';
 
-function CharacterButton({characterName,characterImg}:Record<string,string>){
+function CharacterButton({name,image,characterPreview}:Character){
+  function handleClick(name:string){
+    if(characterPreview) characterPreview(name);
+  }
   return(
-    <div>
-      <button className="btn-character">
-        {characterName}
-        <img src={characterImg}alt={characterName} />
+      <button 
+        className="btn-character"
+        onClick={()=>handleClick(name)}
+      >
+        {name}
+        <img src={image}alt={name} />
       </button>
-    </div>
   )
 }
 
