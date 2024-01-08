@@ -1,0 +1,12 @@
+.btn-character{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width:400px){
+  img{
+    width: 20%;
+  }
+}
