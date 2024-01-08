@@ -1,6 +1,6 @@
 import { troopList } from "../../data"
-import CharacterButton from "../CharacterButton"
-import CardCharacter from "../CardCharacter"
+import CharacterButton from "../../components/CharacterButton"
+import CardCharacter from "../../components/CardCharacter"
 import './style.css'
 import { useState } from "react"
 import { Character } from "../../typeCharacter"
@@ -18,9 +18,9 @@ function CardList (){
       <CardCharacter 
         name={cardCharacter.name}
         image={cardCharacter.image}
-        troop = {cardCharacter.troop}
-        target ={cardCharacter.target}
-        targetArea ={cardCharacter.targetArea}
+        troop={cardCharacter.troop}
+        targetArea={cardCharacter.targetArea}
+        target={cardCharacter.target}
       />
       <div className="card-list">
       {troopList.map((character)=>(
