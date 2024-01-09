@@ -1,8 +1,11 @@
 import { Character } from "../../typeCharacter"
 import './style.css'
 import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
 function CardCharacter({name,target,troop,targetArea,image,trainingTime,houseSpace}:Character){
+
+  const location = useLocation();
 
   return(
     <div className="card-character">
@@ -15,16 +18,21 @@ function CardCharacter({name,target,troop,targetArea,image,trainingTime,houseSpa
           {trainingTime && 
             <div>
             <hr style={{margin: '5px'}} />
-            <p>Mais Informações : </p>
-            <img className='icon' src="https://static.wikia.nocookie.net/clashofclans/images/c/c6/Stopwatch.png" alt="" />{trainingTime} 
+            <span>
+            <img className='icon' src="https://static.wikia.nocookie.net/clashofclans/images/c/c6/Stopwatch.png" alt="" />Tempo de treino :{trainingTime}
+            </span>
             </div>
           }
-          {houseSpace && <p><img className='icon' src="https://static.wikia.nocookie.net/clashofclans/images/2/21/Barracks16.png" alt="" />{houseSpace}</p> }
-          <Link
-            to={`/${name}`}
-          >
-            <button>Mais Informações</button>
-          </Link>
+          {houseSpace && <span><img className='icon' src="https://static.wikia.nocookie.net/clashofclans/images/2/21/Barracks16.png" alt="" />Espaço (Quartel): {houseSpace}</span> 
+          }
+          
+          {location.pathname === '/' &&
+            <Link
+              to={`/character/${name}`}
+            >
+              <button>Mais Informações</button>
+            </Link>
+          }
         </div>
         <img className='character-img' src={image} alt={name} />
       </div>
