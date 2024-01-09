@@ -5,6 +5,7 @@ import {Routes,Route} from 'react-router-dom'
 import CharacterDescription from './pages/CharacterDescription'
 import NotFound from './pages/NotFound'
 import Menu from './components/Menu'
+import About from './pages/About'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<CardList />}/>
         <Route path='/character/:character' element={<CharacterDescription/>}/>
         <Route path='/*' element={<NotFound/>}/>
+        <Route path='/about' element={<About/>} />
      </Routes>
     </div>
   )
